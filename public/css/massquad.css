@@ -1,0 +1,337 @@
+/* MASSQUAD COLOR: #993333 or rgb(153, 51, 51) */
+
+/* TYPOGRAPHY */
+
+html, body {
+	font-family: "Roboto", sans-serif;
+	font-weight: 300;
+}
+
+a {
+	color: #993333;
+}
+
+a:hover {
+	color: #660000;
+}
+
+a.white {
+	color: #fff;
+}
+
+a.nostyle {
+	text-decoration: none;
+}
+
+.text-regular {
+	font-weight: 400;
+}
+
+.text-thin {
+	font-weight: 300;
+}
+
+.text-thinner {
+	font-weight: 100;
+}
+
+/* END OF TYPOGRAPHY */
+
+/* SIZING */
+
+.height-vp-100 {
+	height: 100vh;
+}
+
+.height-vp-90 {
+	height: 100vh;
+}
+
+.height-vp-85 {
+	height: 85vh;
+}
+
+.height-vp-50 {
+	height: 100vh;
+}
+
+.height-vp-min-100 {
+	min-height: 100vh;
+}
+
+.w-md-75 {
+	width: 100%;
+}
+
+.w-md-85 {
+	width: 100%;
+}
+
+/* END OF SIZING */
+
+/* SPACING */
+
+.tab {
+	margin-right: 5px;
+}
+
+/* END OF SPACING */
+
+/* BACKGROUNDS */
+
+.bg-red {
+	background-color: #993333;
+}
+
+.bg-white {
+	background-color: #ffffff;
+}
+
+.bg-tp {
+	background-color: rgba(0, 0, 0, 0.25);
+}
+
+.bg-img-1 {
+	background-image: url("../img/freddie-marriage-264214-unsplash.jpg");
+	background-color: white;
+	background-size: cover;
+}
+
+.bg-img-2 {
+	background-image: url("../img/lonely-planet-643024-unsplash.jpg");
+	background-color: white;
+	background-size: cover;
+}
+
+.bg-img-3 {
+	background-image: url("../img/hannes-egler-525246-unsplash.jpg");
+	background-color: white;
+	background-size: cover;
+}
+
+.bg-img-4 {
+	background-image: url("../img/avel-chuklanov-686867-unsplash.jpg");
+	background-color: white;
+	background-size: cover;
+}
+
+/* END OF BACKGROUNDS */
+
+/* NAVBAR */
+
+.navbar-toggler {
+	border: none;
+	padding: 0;
+}
+
+.navbar-dark .navbar-toggler-icon {
+	background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgb(255, 255, 255)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* END OF NAVBAR */
+
+/* CONTENT CONTAINER */
+
+.content-container {
+	margin-top: 76px;
+}
+
+/* END OF CONTENT CONTAINER */
+
+/* TEAM IMAGE */
+
+.team {
+	max-width: 150px;
+}
+
+/* END OF TEAM IAGE */
+
+/* OFFERS */
+
+.product {
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+.product-smaller {
+	padding-top: 75px;
+	padding-bottom: 75px;
+}
+
+/* END OF OFFERS */
+
+/* LIST GROUP ITEM */
+
+.list-group-item {
+	border-color: #993333;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding: 30px;
+}
+
+/* END OF LIST GROUP ITEM */
+
+/* PARALLAX */
+
+.parallax-hero {
+	/* The image used */
+    background-image: url("../img/lonely-planet-643024-unsplash.jpg");
+
+    /* Set a specific height */
+    height: 500px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.parallax-header { 
+    /* The image used */
+    background-image: url("../img/freddie-marriage-264214-unsplash.jpg");
+
+    /* Set a specific height */
+    height: 200px; 
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* OTHER STYLING */
+
+input {
+	padding: 10px;
+	border: 0.5px solid #993333;
+	border-radius: 5px;
+	font-weight: 300;
+}
+
+hr {
+	border-color: #993333;
+}
+
+.btn-primary {
+	background-color: #993333;
+	border-color: #993333;
+	font-weight: 300;
+	padding: 10px;
+}
+
+.btn-primary:hover {
+	background-color: #660000;
+	border-color: #660000;
+}
+
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
+.show > .btn-primary.dropdown-toggle {
+	background-color: #993333;
+	border-color: #660000;
+}
+
+.btn-outline-primary {
+	border-color: #993333;
+	color: #993333;
+	border-radius: 10px;
+	font-weight: 300;
+}
+
+.btn-outline-primary:hover {
+	border-color: #993333;
+	background-color: #993333;
+}
+
+.border-radius-10 {
+	border-radius: 10px;
+}
+
+.border-2 {
+	border: 2px solid;
+}
+
+.shadow {
+	box-shadow: 0 40px 8px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.4);
+}
+
+.filter-b-75 {
+	-webkit-filter: brightness(75%); /* Safari 6.0 - 9.0 */
+    filter: brightness(75%);
+}
+
+.dropdown-item.active {
+	background-color: #993333;
+	border-radius: 5px;
+}
+
+.icon-100 {
+	font-size: 100px;
+	color: #993333;
+}
+
+/* END OF OTHER STYLING */
+
+/* RESPONSIVE EDITS */
+
+/* Extra small devices (portrait phones, less than 576px) */
+/* No media query for `xs` since this is the default in Bootstrap */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+.height-vp-100 {
+	height: 100vh;
+}
+
+.height-vp-90 {
+	height: 90vh;
+}
+
+.height-vp-85 {
+	height: 85vh;
+}
+
+.height-vp-50 {
+	height: 50vh;
+}
+
+.team {
+	max-width: 200px;
+}
+
+.product {
+	padding: 50px;
+	padding-top: 100px;
+	padding-bottom: 100px;
+}
+
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+
+.w-md-75 {
+	width: 75%;
+}
+
+.w-md-85 {
+	width: 85%;
+}
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+
+}
+
+/* END OF RESPONSIVE EDITS */
+
+/* END OF FILE */
