@@ -8,7 +8,7 @@
   	<!-- CONTENT -->
     <form role="form" method="POST" action="{{ url('/login')}}">
 
-    @{{ csrf_field() }}
+    {!! csrf_field() !!}
     <div class="content-container">
       <div class="height-vp-min-90 bg-img-1">
         <div class="container d-flex align-items-center h-100">
@@ -17,15 +17,18 @@
             <p class="text-center my-4">
               Anna sähköpostisi alla olevaan kenttään, niin lähetämme sinulle kertakäyttöisen salasanan.
             </p>
-            <div class="alert alert-danger w-100" role="alert" id="faulty-email" hidden>
-                Virheellinen sähköpostiosoite.
-            </div>
             <div class="alert alert-danger w-100" role="alert" id="no-user" hidden>
                 Sähköpostia ei löyty käyttäjäkannastamme. <a href="#">Oletko jo rekisteröitynyt?</a>
             </div>
             <div class="my-4">
               Sähköposti<br />
-              <input class="w-100" type="email" />
+              <input class="w-100" type="email" name="email" placeholder="{{ __('Sähköposti') }}" autofocus=""/>
+
+              @if($errors->has('email'))
+                  <div class="alert alert-danger w-100" role="alert" id="faulty-email" hidden>
+                      Virheellinen sähköpostiosoite.
+                  </div>
+              @endif
             </div>
             <div class="my-4">
               <button class="btn btn-primary w-100" onclick="sendPassword()">Lähetä salasana</button>

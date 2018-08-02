@@ -11,8 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('login');
+Route::group(['middleware' => ['web']], function (){
+    Route::get('/login', 'Auth\LoginController@showLoginForm')->name('login');
 });
 
 Auth::routes();
