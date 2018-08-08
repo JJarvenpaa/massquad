@@ -1,4 +1,4 @@
-@extends('layouts.master')
+@extends('layouts.app')
 
 @section('title')
 {{__('Massquad - Kirjaudu sisään')}}
@@ -6,7 +6,7 @@
 
 @section('content')
   	<!-- CONTENT -->
-    <form role="form" method="POST" action="{{ url('/login')}}">
+    <form role="form" method="POST" action="{{ route('login')}}">
 
     {!! csrf_field() !!}
     <div class="content-container">
