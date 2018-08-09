@@ -17,9 +17,9 @@
             <p class="text-center my-4">
               <span>{{__('Anna sähköpostisi alla olevaan kenttään, niin lähetämme sinulle kertakäyttöisen salasanan.')}}</span>
             </p>
-            <!--<div class="alert alert-danger w-100" role="alert" id="no-user" hidden>
+            <div class="alert alert-danger w-100" role="alert" id="no-user" hidden>
                 Sähköpostia ei löyty käyttäjäkannastamme. <a href="#">Oletko jo rekisteröitynyt?</a>
-            </div>-->
+            </div>
             <div class="my-4">
                 {{__('Etunimi')}}<br />
                 <input class="w-100" type="firstname" name="firstname" placeholder="{{ __('Etunimi') }}" autofocus=""/>
@@ -42,7 +42,7 @@
               @endif
             </div>
             <div class="my-4">
-              <button class="btn btn-primary w-100" onclick="sendPassword()">Lähetä salasana</button>
+              <button class="btn btn-primary w-100" type="submit" name="sendtouser" id="sendtouser">Lähetä salasana</button>
             </div>
             <div class="my-4 text-center">
                 <a href="#">Etkö ole vielä rekisteröitynyt? Tee se tästä!</a>
