@@ -15,15 +15,26 @@
           <div class="bg-white shadow p-5 w-md-75 mx-auto my-5">
             <h1 class="text-center">Kirjaudu sisään</h1>
             <p class="text-center my-4">
-              Anna sähköpostisi alla olevaan kenttään, niin lähetämme sinulle kertakäyttöisen salasanan.
+              <span>{{__('Anna sähköpostisi alla olevaan kenttään, niin lähetämme sinulle kertakäyttöisen salasanan.')}}</span>
             </p>
-            <div class="alert alert-danger w-100" role="alert" id="no-user" hidden>
+            <!--<div class="alert alert-danger w-100" role="alert" id="no-user" hidden>
                 Sähköpostia ei löyty käyttäjäkannastamme. <a href="#">Oletko jo rekisteröitynyt?</a>
+            </div>-->
+            <div class="my-4">
+                {{__('Etunimi')}}<br />
+                <input class="w-100" type="firstname" name="firstname" placeholder="{{ __('Etunimi') }}" autofocus=""/>
             </div>
             <div class="my-4">
-              Sähköposti<br />
+                {{__('Sukunimi')}}<br />
+                <input class="w-100" type="surname" name="surname" placeholder="{{ __('Sukunimi') }}" autofocus=""/>
+            </div>
+            <div class="my-4">
+                {{__('Puhelinnumero')}}<br />
+                <input class="w-100" type="phonenum" name="phonenum" placeholder="{{ __('Puhelinnumero') }}" autofocus=""/>
+            </div>
+            <div class="my-4">
+              {{__('Sähköposti')}}<br />
               <input class="w-100" type="email" name="email" placeholder="{{ __('Sähköposti') }}" autofocus=""/>
-
               @if($errors->has('email'))
                   <div class="alert alert-danger w-100" role="alert" id="faulty-email" hidden>
                       Virheellinen sähköpostiosoite.
