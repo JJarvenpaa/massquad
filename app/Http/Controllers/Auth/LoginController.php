@@ -25,7 +25,7 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/';
 
     /**
      * Create a new controller instance.
@@ -37,8 +37,17 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-    public function showLoginForm()
+    /*public function showLoginForm()
     {
         return view('auth.login');
+    }*/
+    private function handleSendToUser(Request $request, User $user)
+    {
+        if ($request->has('sendtouser')) {
+        $newPassword = str_random(12);
+        $user->password = $newPassword;
+        $user->save();
+        $user->notify(new UserInfo($newPassword));
+        }
     }
 }
