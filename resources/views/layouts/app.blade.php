@@ -37,7 +37,7 @@
           <div class="collapse navbar-collapse justify-content-between" id="navbar">
               <ul class="navbar-nav mr-auto">
                   <li class="nav-item">
-                      <a class="nav-link text-thin" href="index.html">Etusivu</a>
+                      <a class="nav-link text-thin" href="">Etusivu</a>
                   </li>
                   <li class="nav-item">
                       <a class="nav-link text-thin" href="concept.html">Miten Massquad toimii</a>
@@ -52,7 +52,7 @@
                   <a class="nav-link text-thin" href="offers-new-offer-1.html">Kilpailuta koulutus</a>
                 </li>
             <li class="nav-item active">
-              <a class="nav-link text-thin" href="login.html">Kirjaudu sisään <span class="sr-only">(current)</span></a>
+              <a class="nav-link text-thin" href="{{route('login')}}">{{__('Kirjaudu sisään')}} <span class="sr-only">(current)</span></a>
             </li>
           </ul>
           </div> <!-- div .navbar-collapse -->
