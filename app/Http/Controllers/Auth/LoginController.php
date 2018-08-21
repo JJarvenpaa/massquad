@@ -25,7 +25,26 @@ class LoginController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/';
+
+
+     public function login(Request $request)
+     {
+     $this->validate($request, [
+         'email'=>'required|max:255|email',
+         'password'=>'required|confirmed',
+       ]);
+       $this->getStoreValidation();
+        if (Auth::attempt(['email' => $email, 'password' => $password])) {
+          // Success
+          return redirect()->intended('/');
+        } else {
+          // Go back on error
+          return redirect()->back()
+          ->withErrors($this)
+          ->withInput(Input::except('password'));
+
+
+    }
 
     /**
      * Create a new controller instance.
