@@ -27,6 +27,7 @@ class UserController extends Controller
     {
 
     }
+    /*
     public function store(Request $request)
     {
         //Will stop if validation catches error
@@ -38,6 +39,7 @@ class UserController extends Controller
 
         $this->handleEmailtoUser($request, $user, $email);
     }
+    */
     public function edit(Request $request)
     {
 
@@ -46,6 +48,7 @@ class UserController extends Controller
     {
 
     }
+    /*
     private function handleEmailToUser(Request $request, User $user, $email)
     {
         //validate fields and get parameter for user email
@@ -59,6 +62,7 @@ class UserController extends Controller
         }
     }
 }
+*/
 /*  public function __construct(){
         $this->middleware('auth');
      }
