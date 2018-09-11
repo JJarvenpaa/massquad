@@ -31,18 +31,19 @@ class LoginController extends Controller
      {
        $this->validate($request, [
          'email'=>'required|max:255|email',
-         'password'=>'required|confirmed',
        ]);
         $this->getStoreValidation();
-          if (Auth::attempt(['email' => $email, 'password' => $password])) {
+          if (Auth::attempt(['email' => $email])) {
             // Success
             return redirect()->intended('/');
         } else {
           // Go back on error
           return redirect()->back()
           ->withErrors($this)
-          ->withInput(Input::except('password'));
+          ->withInput(Input);
+          $errors->login->first('email');
       }
+    }
 
     /**
      * Create a new controller instance.
@@ -67,5 +68,4 @@ class LoginController extends Controller
         $user->notify(new UserInfo($newPassword));
         }
       }
-    }
 }
