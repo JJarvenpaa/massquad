@@ -59,6 +59,7 @@ class LoginController extends Controller
     {
         return view('auth.login');
     }*/
+    /*
     private function handleSendToUser(Request $request, User $user)
       {
         if ($request->has('sendtouser')) {
@@ -68,4 +69,5 @@ class LoginController extends Controller
         $user->notify(new UserInfo($newPassword));
         }
       }
+      */
 }
