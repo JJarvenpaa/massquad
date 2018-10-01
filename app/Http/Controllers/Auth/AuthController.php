@@ -25,7 +25,7 @@ class AuthController extends Controller
         ]);
       }
 
-    public function login()
+    public function login(Request $request)
       {
         $this->validate($request, ['email' => 'required|email|exists:users']);
 
@@ -39,10 +39,19 @@ class AuthController extends Controller
           $m->from('noreply@myapp.com', 'MyApp');
           $m->to($request->input('email'))->subject('MyApp Login');
         });
-        
+
 
         return 'Sähköposti lähetetty.'
       }
+
+      public function authenticateEmail($token)
+    {
+        $emailLogin = EmailLogin::validFromToken($token);
+
+        Auth::login($emailLogin->user);
+
+        return redirect('/');
+    }
 
         Schema::create('email_logins', function (Blueprint $table) {
           $table->string('email')->index();

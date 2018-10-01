@@ -27,12 +27,12 @@ class UserController extends Controller
     {
 
     }
-    /*
+
     public function store(Request $request)
     {
         //Will stop if validation catches error
         //$request->validate($request->getStoreValidation());
-
+/*
         $input['password'] = Hash::make($input['password']);
         $email = $input['email'];
         $user = User::create($input);
@@ -48,7 +48,7 @@ class UserController extends Controller
     {
 
     }
-    /*
+
     private function handleEmailToUser(Request $request, User $user, $email)
     {
         //validate fields and get parameter for user email
