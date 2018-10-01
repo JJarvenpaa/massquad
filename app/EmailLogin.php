@@ -13,7 +13,12 @@ class EmailLogin extends Model
         return $this->hasOne(\App\User::class, 'email', 'email');
     }
 
-
+    public static function validFromToken($token)
+        {
+            return self::where('token', $token)
+                ->where('created_at', '>', Carbon::parse('-15 minutes'))
+                ->firstOrFail();
+        }
 
 public static function createForEmail($email)
     {
