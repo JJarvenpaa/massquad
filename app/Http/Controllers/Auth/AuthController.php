@@ -9,14 +9,16 @@ use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 
 class AuthController extends Controller
 {
+  /* Rekisteröinnin validointi */
     protected function validator(array $data)
       {
         return Validator::make($data, [
             'name' => 'required|max:255',
             'email' => 'required|email|max:255|unique:users',
+            return 'validointi debug viesti'
         ]);
       }
-
+    /* Rekisteröintitietojen luonti */
     protected function create(array $data)
       {
         return User::create([
@@ -27,6 +29,7 @@ class AuthController extends Controller
 
     public function login(Request $request)
       {
+        /* Validoi spostiosoite */
         $this->validate($request, ['email' => 'required|email|exists:users']);
 
         $emailLogin = EmailLogin::createForEmail($request->input('email'));
@@ -35,6 +38,7 @@ class AuthController extends Controller
           'token' => $emailLogin->token
         ]);
 
+        /* lähetä sposti */
         Mail::send('auth.emails.email-login', ['url' => $url], function ($m) use ($request) {
           $m->from('noreply@myapp.com', 'MyApp');
           $m->to($request->input('email'))->subject('MyApp Login');

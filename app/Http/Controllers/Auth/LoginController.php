@@ -27,7 +27,7 @@ class LoginController extends Controller
      */
 
 
-     public function login(Request $request)
+    /* public function login(Request $request)
      {
        $this->validate($request, [
          'email'=>'required|max:255|email',
@@ -44,7 +44,7 @@ class LoginController extends Controller
           $errors->login->first('email');
       }
     }
-
+*/
     /**
      * Create a new controller instance.
      *
