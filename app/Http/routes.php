@@ -1,4 +1,5 @@
 <?php
+
 Route::get('auth/email-authenticate/{token}', [
     'as' => 'auth.email-authenticate',
     'uses' => 'Auth\AuthController@authenticateEmail'
@@ -13,7 +14,7 @@ class AuthController
 
         Auth::login($emailLogin->user);
 
-        return redirect('home');
+        return redirect('index');
     }
 }
 
